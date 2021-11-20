@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+$Soft-blue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+$Very-dark-blue: hsl(217, 54%, 11%);
+$Very-dark-blue2: hsl(216, 50%, 16%);
+$Very-dark-blue3: hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+
+body {
+  background-color: $Very-dark-blue;
+  font-family: "Outfit";
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 98%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    border-radius: 10px;
+
+    .eye {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.wrapper {
+  background-color: $Very-dark-blue2;
+  width: 350px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 15px;
+
+  h2 {
+    color: $White;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  h2:hover {
+    color: $Cyan;
+    cursor: pointer;
+  }
+
+  .paragraph {
+    color: $Soft-blue;
+    font-weight: 300;
+    font-size: 0.92rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .small-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $Very-dark-blue3;
+
+    .eth-wrap {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+    }
+
+    .number {
+      color: $Cyan;
+      font-weight: 400;
+      font-size: 0.85rem;
+    }
+
+    .clock-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      .days-left {
+        color: $Soft-blue;
+        font-size: 0.85rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .avatar-wrap {
+    display: flex;
+    align-items: center;
+
+    #avatar {
+      width: 30px;
+      border-radius: 50%;
+      outline: 1px solid $White;
+    }
+
+    .creation-by {
+      margin-left: 0.7rem;
+      font-size: 0.85rem;
+      color: $Soft-blue;
+      font-weight: 400;
+
+      .strong {
+        color: $White;
+      }
+
+      .strong:hover {
+        color: $Cyan;
+        cursor: pointer;
+      }
+    }
+  }
+}
